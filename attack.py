@@ -36,7 +36,7 @@ print(f"[>]{BLUE} Enter Victim AP Channel : {RESET}", end="")
 channel = input()
 
 print(f"[+] {RED}Starting Client Scan in new Window{RESET}")
-p1 = Popen(["xterm", "-e", "python3", "client_scan.py", bssid, channel, iface, "&"])
+p1 = Popen(["xterm", "-hold", "-e", "python3", "client_scan.py", bssid, channel, iface, "&"])
 sleep(5)
 
 print(f"[+] {RED}Starting AP...{RESET}  ", end="")
